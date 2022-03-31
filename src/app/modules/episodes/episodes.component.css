@@ -1,0 +1,86 @@
+
+
+h1{
+
+  font: oblique bold 400% cursive;
+  color: #ffffff;
+  font-size: 50px;
+  font-weight: 600;
+  letter-spacing: 2px;
+  text-shadow: 0 0 10px #07a6fc,
+  0 0 20px #07a6fc,
+  0 0 40px #07a6fc,
+  0 0 80px #07a6fc,
+  0 0 120px #07a6fc;
+}
+img{
+  border: 5px solid rgba(255, 255, 255, 0.549);
+  border-radius:20px;
+  height: 300px;
+  width: 400px;
+  cursor:pointer;
+
+
+
+}
+.light-box {
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.652);
+  /* transition: transform .3s ease-in-out; */
+  width: 100%;
+  height: 100vh;
+  z-index: 1000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  /* transform: scale(0) ; */
+}
+
+.light-box iframe{
+
+  width: 50vw;
+  max-height: 50vh;
+
+
+}
+.close{
+  display: block;
+  position: absolute;
+  top: 70px;
+  right: 70px;
+  background: #070101;
+  color: #ffffffab;
+  text-decoration: none;
+  width: 40px;
+  height: 40px;
+  text-align: center;
+  line-height: 30px;
+  border-radius: 60%;
+border: 3px solid;
+
+
+
+
+}
+
+.close{
+
+  text-shadow: 0 0 10px #00ff2a,
+  0 0 20px #00ff2a,
+  0 0 40px #00ff2a,
+  0 0 80px #00ff2a,
+  0 0 120px #00ff2a;
+
+}
+
+@media (max-width: 500px){
+  img{
+    height: 200px;
+    width: 300px;
+  }
+
+
+}

@@ -1,0 +1,28 @@
+<app-navbar></app-navbar>
+
+  <div class="container">
+    <div class="row">
+      <div class="col-md-10 offset-md-1"  >
+        <div class="row row-cols-1 row-cols-md-5 g-4" style="margin-top:10px">
+           <input type="text" class="form-control" name="filterData" placeholder="search" [(ngModel)]="filterData">
+          <div *ngFor = "let characters of data | filter:filterData" class="col">
+            <div class="card h-100"  style="border: 2px solid; border-color: #00ff2a43; ">
+                <img [src]="characters.img" class="card-img-top" alt="...">
+              <div class="card-body" style="background:rgb(0, 0, 0)">
+                <h6  style="text-align: left" class="name">{{characters.name}}</h6>
+                <h6  style="text-align: left" class="name">{{characters.episode}}</h6>
+                <div class="d-grid gap-2 d-md-flex justify-content-md-end" style="margin-top:px">
+                  <button (click)="getCar(characters.position)" type="button" class="btn btn-outline-warning">info</button>
+                </div>
+
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div><br>
+
+<app-footer></app-footer>
+
+

@@ -1,0 +1,86 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body{
+  height: 50vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+
+}
+
+.slider{
+  position: relative;
+  width: 200px;
+  height: 200px;
+  transform-style: preserve-3d;
+  animation: rotate 30s linear infinite;
+
+}
+
+@keyframes rotate {
+  0% {
+    transform: perspective(1000px) rotateY(0deg);
+  }
+  100% {
+    transform: perspective(1000px) rotateY(360deg)
+  }
+}
+
+.slider span{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  /* con este transform se organiza todas las imagenes y rotan */
+transform: rotateY(calc(var(--i)*45deg)) translateZ(350px)
+}
+
+.slider span img{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+  object-fit: cover;
+  /* transition hacia arriba */
+  transition: 2s;
+}
+
+  /* transform hacia arriba */
+.slider span:hover img{
+  transform: translateY(-50px) scale(1.2)
+}
+
+ h3{
+
+  font: oblique bold 400% cursive;
+  color: #ffffff;
+  font-size: 50px;
+  font-weight: 600;
+  letter-spacing: 2px;
+  text-shadow: 0 0 10px #00ff2a,
+  0 0 20px #00ff2a,
+  0 0 40px #00ff2a,
+  0 0 80px #00ff2a,
+  0 0 120px #00ff2a;
+}
+@media (max-width: 500px){
+
+  .slider span img{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 80%;
+    height: 80%;
+    border-radius: 10px;
+    object-fit: cover;
+    transition: 2s;
+  }
+  }

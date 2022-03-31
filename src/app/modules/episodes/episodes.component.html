@@ -1,0 +1,20 @@
+
+  <h1 style="text-align: center; margin-top:-30px">Episodes</h1>
+
+  <div class="container" style="margin-bottom:10px; align-content:center;">
+
+    <div class="row align-items-start" >
+      <div *ngFor="let video of videoLibrary.video" class="col">
+        <img (click)="OpenVideo(video.url)" [src]="video.image" style="margin:5px" >
+      </div>
+    </div>
+
+  </div>
+
+  <section class="light-box" *ngIf="openVideo">
+    <iframe   width="500" height="500" [src]= "videoUrl" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen
+    style="border: 5px solid; border-radius: 20px; border-color: rgba(255, 255, 255, 0.686);"></iframe>
+    <button (click)="hideVideo()" class="close" ><strong>X</strong></button>
+  </section>
+
+
